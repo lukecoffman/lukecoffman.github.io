@@ -1,5 +1,5 @@
 ---
-title: "Measuring Non-Gaussian Magic in Fermions>: Convolution, Entropy, and the Violation of Wick>'s Theorem and the Matchgate Identity"
+title: "Measuring Non-Gaussian Magic in Fermions Convolution, Entropy, and the Violation of Wicks Theorem and the Matchgate Identity"
 collection: publications
 category: manuscripts
 permalink: /publication/2025-01-10-magic-fermions-convolution
