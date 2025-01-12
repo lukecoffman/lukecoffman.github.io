@@ -29,7 +29,7 @@ I am interested in the theory of entanglement, how we can efficiently learn prop
         {% continue %}
       {% endif %}
       {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
+        ## {{ category[1].title }}
         {% assign title_shown = true %}
       {% endunless %}
       {% include archive-single.html %}
