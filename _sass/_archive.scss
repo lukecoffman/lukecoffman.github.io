@@ -90,7 +90,7 @@
    ========================================================================== */
 
 .list__item {
-  @include breakpoint($medium) {
+  @include breakpoint($large) {
     padding-right: $right-sidebar-width-narrow;
   }
 
