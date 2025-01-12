@@ -8,7 +8,7 @@ date: 2024-07-23
 venue: 'Physical Review A'
 slidesurl:
 paperurl: 'https://journals.aps.org/pra/abstract/10.1103/PhysRevA.110.012454'
-citation: '**Luke Coffman**, Akshay Seshadri, Graeme Smith, Jacob L. Beckey. Local measurement strategies for multipartite entanglement quantification. Phys. Rev. A 110, 012454, Jul. 2024.'
+citation: '<b>Luke Coffman</b>, Akshay Seshadri, Graeme Smith, Jacob L. Beckey. Local measurement strategies for multipartite entanglement quantification. Phys. Rev. A 110, 012454, Jul. 2024.'
 ---
 
 This is some filler text.
