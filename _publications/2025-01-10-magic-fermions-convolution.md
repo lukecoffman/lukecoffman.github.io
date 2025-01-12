@@ -7,7 +7,7 @@ excerpt: 'Defined convolution for fermionic systems, proved a quantum central li
 date: 2025-01-10
 venue: 'arXiv'
 slidesurl:
-paperurl: 'http://academicpages.github.io/files/paper3.pdf'
+paperurl:
 citation: '<b>Luke Coffman</b>, Graeme Smith, and Xun Gao. Measuring non-Gaussian magic in fermions: entropy, convolution, and the violation of Wick's theorem and the matchgate identity. arXiv, Jan. 2025.'
 ---
 
