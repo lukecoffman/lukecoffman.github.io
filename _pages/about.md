@@ -19,8 +19,6 @@ I am interested in the theory of entanglement, how we can efficiently learn prop
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
-<div class="publication-archive" style="padding: 0; margin: 0 auto;">
-    {% for post in site.publications reversed %}
-        {% include archive-single.html %}
-    {% endfor %}
-</div>
+{% for post in site.publications reversed %}
+  {% include front-page-pub.html %}
+{% endfor %}
