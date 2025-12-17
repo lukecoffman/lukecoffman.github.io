@@ -9,56 +9,38 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+## Highlights (**Full CV PDF**)
+### Research and Education
+- Ph.D. in Quantum Science and Engineering, Harvard, 2030 (expected)
+- Interest Areas: Entanglement Theory, Quantum Learning Theory, and Representation Theory
+- 1 peer-reviewed publication, 1 pre-print article
+- 9 Graduate courses in Physics and Mathematics as of Spring 2025
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+### Awards and Fellowships
+- NSF Graduate Research Fellow
+- Los Alamos Quantum Computing Summer School (Summer 2025)
+- Barry M. Goldwater Scholarship
+- Astronaut Scholarship
+- ORISE Internship at Oak Ridge National Laboratory
+- USEQIP and Undergraduate Research Awardee at IQC
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+### Teaching and Outreach
+- Collaboratively wrote and recieved $38k grant to bolster access to undergraduate research
+- SPS co-president and math COSMOS vice-president (2024-2025)
+- Mentoring and supervising three undergraduate research projects
+- Undergraduate TA for PHYS 3090: Introduction to Quantum Computing at CU Boulder
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
+## Publications
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
-======
+
+## Talks
   <ul>{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
-  
-Teaching
-======
+
+## Teaching
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams

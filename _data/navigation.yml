@@ -8,26 +8,23 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
-  - title: "Publications"
-    url: /publications/
-
-  - title: "Talks"
-    url: /talks/    
-
-  - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
-    
   - title: "CV"
     url: /cv/
-    
-  # - title: "CV"
-  #   url: /cv-json/
-    
-  - title: "Guide"
-    url: /markdown/
+
+  - title: "Research"
+    url: /research/
+
+  - title: "Digital Garden"
+    url: /digital-garden/
+
+  - title: "Iota Irrep"
+    url: /iota-irrep/
+
+  - title: "Neumann"
+    url: /neumann/
+
+  - title: "QLT Zoo"
+    url: /QLT-zoo/
+
+  - title: "Blog Posts"
+    url: /year-archive/
