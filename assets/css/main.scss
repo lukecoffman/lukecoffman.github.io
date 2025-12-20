@@ -8,6 +8,8 @@
    sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
 
+$lucide-path: "{{ '/assets/icons/lucide' | relative_url }}";
+
 @import
     "vendor/breakpoint/breakpoint",
 
@@ -39,5 +41,7 @@
 
     "vendor/font-awesome/fontawesome",
     "vendor/font-awesome/solid",
-    "vendor/font-awesome/brands"
+    "vendor/font-awesome/brands",
+
+    "callouts"
 ;

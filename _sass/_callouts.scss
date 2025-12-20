@@ -1,0 +1,343 @@
+/* Obsidian-like LIGHT callouts with Lucide SVG icons
+   (Sass-safe: no interpolation in CSS variables)
+*/
+
+:root {
+  --callout-radius: 10px;
+  --callout-border-w: 1px;
+  --callout-leftbar-w: 3px;
+
+  --callout-pad-x: 1rem;
+  --callout-pad-y: 0.9rem;
+
+  --callout-title-strip-alpha: 0.12;
+  --callout-border-alpha: 0.30;
+
+  --callout-bg: #ffffff;
+  --callout-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+/* -------------------------------------------------
+   Base callout container
+-------------------------------------------------- */
+.callout {
+  --callout-accent: 120, 120, 120; /* default */
+
+  border-radius: var(--callout-radius);
+  margin: 1.1rem 0;
+  background: var(--callout-bg);
+  border: var(--callout-border-w)
+    solid rgba(var(--callout-accent), var(--callout-border-alpha));
+
+  box-shadow:
+    inset var(--callout-leftbar-w) 0 0 0 rgba(var(--callout-accent), 0.95),
+    var(--callout-shadow);
+
+  overflow: hidden;
+}
+
+/* -------------------------------------------------
+   Title strip
+-------------------------------------------------- */
+.callout-title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+
+  padding: 0.75rem var(--callout-pad-x);
+  margin: 0;
+
+  font-weight: 700;
+  line-height: 1.2;
+
+  color: rgba(var(--callout-accent), 1);
+  background: rgba(var(--callout-accent), var(--callout-title-strip-alpha));
+  border-bottom: 1px solid rgba(var(--callout-accent), 0.18);
+
+  &::before {
+    content: "";
+    width: 1.1rem;
+    height: 1.1rem;
+    flex: 0 0 auto;
+
+    background: rgba(var(--callout-accent), 1);
+
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+}
+
+/* -------------------------------------------------
+   Body
+-------------------------------------------------- */
+.callout-body {
+  padding: var(--callout-pad-y) var(--callout-pad-x);
+
+  > :first-child { margin-top: 0; }
+  > :last-child  { margin-bottom: 0; }
+}
+
+/* -------------------------------------------------
+   Obsidian default callout types
+   (YOUR icon choices)
+-------------------------------------------------- */
+
+.callout-note {
+  --callout-accent: 120, 120, 120;
+  .callout-title::before {
+    -webkit-mask-image: url('#{$lucide-path}/file-text.svg');
+    mask-image: url('#{$lucide-path}/file-text.svg');
+  }
+}
+
+.callout-abstract {
+  --callout-accent: 99, 102, 241;
+  .callout-title::before {
+    -webkit-mask-image: url('#{$lucide-path}/clipboard-list.svg');
+    mask-image: url('#{$lucide-path}/clipboard-list.svg');
+  }
+}
+
+.callout-info {
+  --callout-accent: 59, 130, 246;
+  .callout-title::before {
+    -webkit-mask-image: url('#{$lucide-path}/info.svg');
+    mask-image: url('#{$lucide-path}/info.svg');
+  }
+}
+
+.callout-todo {
+  --callout-accent: 14, 165, 233;
+  .callout-title::before {
+    -webkit-mask-image: url('#{$lucide-path}/list-todo.svg');
+    mask-image: url('#{$lucide-path}/list-todo.svg');
+  }
+}
+
+.callout-tip {
+  --callout-accent: 16, 185, 129;
+  .callout-title::before {
+    -webkit-mask-image: url('#{$lucide-path}/lightbulb.svg');
+    mask-image: url('#{$lucide-path}/lightbulb.svg');
+  }
+}
+
+.callout-success {
+  --callout-accent: 34, 197, 94;
+  .callout-title::before {
+    -webkit-mask-image: url('#{$lucide-path}/circle-check-big.svg');
+    mask-image: url('#{$lucide-path}/circle-check-big.svg');
+  }
+}
+
+.callout-question {
+  --callout-accent: 139, 92, 246;
+  .callout-title::before {
+    -webkit-mask-image: url('#{$lucide-path}/circle-question-mark.svg');
+    mask-image: url('#{$lucide-path}/circle-question-mark.svg');
+  }
+}
+
+.callout-warning {
+  --callout-accent: 245, 158, 11;
+  .callout-title::before {
+    -webkit-mask-image: url('#{$lucide-path}/triangle-alert.svg');
+    mask-image: url('#{$lucide-path}/triangle-alert.svg');
+  }
+}
+
+.callout-failure {
+  --callout-accent: 249, 115, 22;
+  .callout-title::before {
+    -webkit-mask-image: url('#{$lucide-path}/circle-x.svg');
+    mask-image: url('#{$lucide-path}/circle-x.svg');
+  }
+}
+
+.callout-danger {
+  --callout-accent: 239, 68, 68;
+  .callout-title::before {
+    -webkit-mask-image: url('#{$lucide-path}/zap.svg');
+    mask-image: url('#{$lucide-path}/zap.svg');
+  }
+}
+
+.callout-bug {
+  --callout-accent: 236, 72, 153;
+  .callout-title::before {
+    -webkit-mask-image: url('#{$lucide-path}/bug.svg');
+    mask-image: url('#{$lucide-path}/bug.svg');
+  }
+}
+
+.callout-example {
+  --callout-accent: 20, 184, 166;
+  .callout-title::before {
+    -webkit-mask-image: url('#{$lucide-path}/dumbbell.svg');
+    mask-image: url('#{$lucide-path}/dumbbell.svg');
+  }
+}
+
+.callout-quote {
+  --callout-accent: 100, 116, 139;
+  .callout-title::before {
+    -webkit-mask-image: url('#{$lucide-path}/message-square-quote.svg');
+    mask-image: url('#{$lucide-path}/message-square-quote.svg');
+  }
+}
+
+/* ============================
+   “Math / formal” callouts
+   theorem/lemma/definition/etc.
+   (basic visuals only — no folding)
+   ============================ */
+
+/* Shared styling for formal callouts */
+.callout.callout-theorem,
+.callout.callout-thm,
+.callout.callout-lemma,
+.callout.callout-lem,
+.callout.callout-definition,
+.callout.callout-def,
+.callout.callout-problem,
+.callout.callout-prob,
+.callout.callout-example,
+.callout.callout-proof,
+.callout.callout-proposition,
+.callout.callout-prop,
+.callout.callout-corollary,
+.callout.callout-cor {
+  /* override the “colored title strip” look */
+  background: transparent;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.28);
+  border-radius: 10px;
+
+  font-family: "CMU Serif", Times, "Noto Serif JP", serif;
+  position: relative;
+}
+
+/* Remove the Lucide icon for these callouts */
+.callout.callout-theorem .callout-title::before,
+.callout.callout-thm .callout-title::before,
+.callout.callout-lemma .callout-title::before,
+.callout.callout-lem .callout-title::before,
+.callout.callout-definition .callout-title::before,
+.callout.callout-def .callout-title::before,
+.callout.callout-problem .callout-title::before,
+.callout.callout-prob .callout-title::before,
+.callout.callout-example .callout-title::before,
+.callout.callout-proof .callout-title::before,
+.callout.callout-proposition .callout-title::before,
+.callout.callout-prop .callout-title::before,
+.callout.callout-corollary .callout-title::before,
+.callout.callout-cor .callout-title::before {
+  display: none !important;
+}
+
+/* Title typography for formal callouts */
+.callout.callout-theorem .callout-title,
+.callout.callout-thm .callout-title,
+.callout.callout-lemma .callout-title,
+.callout.callout-lem .callout-title,
+.callout.callout-definition .callout-title,
+.callout.callout-def .callout-title,
+.callout.callout-problem .callout-title,
+.callout.callout-prob .callout-title,
+.callout.callout-example .callout-title,
+.callout.callout-proof .callout-title,
+.callout.callout-proposition .callout-title,
+.callout.callout-prop .callout-title,
+.callout.callout-corollary .callout-title,
+.callout.callout-cor .callout-title {
+  /* remove translucent title strip */
+  background: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+
+  font-family: "CMU Serif", Times, "Noto Sans JP", serif;
+  font-weight: 700;
+  color: inherit;
+}
+
+/* Add a type label before the title text (like your Obsidian snippet) */
+.callout.callout-theorem .callout-title::before,
+.callout.callout-thm .callout-title::before {
+  display: inline;
+  content: "Theorem. ";
+  font-weight: 700;
+}
+
+.callout.callout-lemma .callout-title::before,
+.callout.callout-lem .callout-title::before {
+  display: inline;
+  content: "Lemma. ";
+  font-weight: 700;
+}
+
+.callout.callout-definition .callout-title::before,
+.callout.callout-def .callout-title::before {
+  display: inline;
+  content: "Definition. ";
+  font-weight: 700;
+}
+
+.callout.callout-problem .callout-title::before,
+.callout.callout-prob .callout-title::before {
+  display: inline;
+  content: "Problem. ";
+  font-weight: 700;
+}
+
+.callout.callout-example .callout-title::before {
+  display: inline;
+  content: "Example. ";
+  font-weight: 700;
+}
+
+.callout.callout-proposition .callout-title::before,
+.callout.callout-prop .callout-title::before {
+  display: inline;
+  content: "Proposition. ";
+  font-weight: 700;
+}
+
+.callout.callout-corollary .callout-title::before,
+.callout.callout-cor .callout-title::before {
+  display: inline;
+  content: "Corollary. ";
+  font-weight: 700;
+}
+
+/* QED box for proofs */
+.callout.callout-proof::after {
+  content: "□";
+  font-size: 1.15em;
+  position: absolute;
+  bottom: 0.55em;
+  right: 1em;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+/* Slightly tighter body typography for formal callouts */
+.callout.callout-theorem .callout-body,
+.callout.callout-thm .callout-body,
+.callout.callout-lemma .callout-body,
+.callout.callout-lem .callout-body,
+.callout.callout-definition .callout-body,
+.callout.callout-def .callout-body,
+.callout.callout-problem .callout-body,
+.callout.callout-prob .callout-body,
+.callout.callout-example .callout-body,
+.callout.callout-proof .callout-body,
+.callout.callout-proposition .callout-body,
+.callout.callout-prop .callout-body,
+.callout.callout-corollary .callout-body,
+.callout.callout-cor .callout-body {
+  font-family: "CMU Serif", Times, "Noto Serif JP", serif;
+}
+

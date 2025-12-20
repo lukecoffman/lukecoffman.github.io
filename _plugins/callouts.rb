@@ -32,10 +32,10 @@ module ObsidianCallouts
       body_lines = []
 
       # First line: drop "[!type]" and any trailing "^id"
-      first_body = line
-        .sub(/^\s*>\s*\[![A-Za-z]+\]\s*/, "")
-        .sub(/\s*\^[A-Za-z0-9\-_]+\s*$/, "")
-      body_lines << first_body unless first_body.strip.empty?
+      #first_body = line
+      #  .sub(/^\s*>\s*\[![A-Za-z]+\]\s*/, "")
+      #  .sub(/\s*\^[A-Za-z0-9\-_]+\s*$/, "")
+      #body_lines << first_body unless first_body.strip.empty?
 
       # Collect the rest of the contiguous blockquote
       i += 1
@@ -66,7 +66,9 @@ module ObsidianCallouts
       out << %(<div class="callout callout-#{type}"#{id_attr}>)
       out << %(  <div class="callout-title">#{escape_html(title)}</div>)
       out << %(  <div class="callout-body" markdown="1">)
-      body_lines.each { |bl| out << "    #{bl}" }
+      out << ""
+      body_lines.each { |bl| out << bl }
+      out << ""
       out << %(  </div>)
       out << %(</div>)
     end
