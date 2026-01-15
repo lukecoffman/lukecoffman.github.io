@@ -17,14 +17,14 @@ main:
   - title: "Digital Garden"
     url: /digital-garden/
 
-  - title: "Iota Irrep"
-    url: /iota-irrep/
+#  - title: "Iota Irrep"
+#    url: /iota-irrep/
 
-  - title: "Neumann"
-    url: /neumann/
+#  - title: "Neumann"
+#    url: /neumann/
 
-  - title: "QLT Zoo"
-    url: /QLT-zoo/
+#  - title: "QLT Zoo"
+#    url: /QLT-zoo/
 
   - title: "Blog Posts"
     url: /year-archive/

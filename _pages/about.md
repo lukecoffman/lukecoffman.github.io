@@ -11,7 +11,8 @@ My name is Luke, I'm a G1 PhD Student at [Harvard](https://quantum.harvard.edu/)
 
 I recieved my BA in Physics and Mathematics from the [University of Colorado, Boulder](https://www.colorado.edu/physics/) where I worked with [Dr. Graeme Smith](https://gsbsmith.ca/) and [Dr. Xun Gao](https://www.colorado.edu/physics/xun-gao). During my BA, I was named a [Goldwater Scholar](https://goldwaterscholarship.gov/) and [Astronaut Scholar](https://www.astronautscholarship.org/).
 
-I've spent time at Los Alamos, ORNL, IQC, and other places over the years (see my CV for more details). I am a curator for the QLT Zoo, I run a YouTube channel called [Iota Irrep](https://www.youtube.com/@IotaIrrep) where I do science and math explainers on different topics I'm interested in, and I also am developing a personal AI research assistant named Neumann. For fun I play curling and enjoy rock climbing, as well as, play the piano and guitar.
+
+**This site is still under construction, more coming soon!**
 
 ## Research Interests
 
